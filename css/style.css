@@ -227,32 +227,67 @@ img {
 }
 
 /** Contacto **/
+/** Contacto **/
 .contacto-bg {
     background-image: url(../img/contacto.jpg);
     height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
+/* FORMULARIO */
 .formulario {
     background-color: var(--blanco);
     margin: -5rem auto 0 auto;
     width: 95%;
-    padding: 5rem;
+    padding: 3rem;
 }
+
+/* CAMPOS */
 .campo {
     display: flex;
+    flex-direction: column;
     margin-bottom: 2rem;
 }
+
 .campo__label {
-    flex: 0 0 9rem;
-    text-align: right;
-    padding-right: 2rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
 }
+
 .campo__field {
-    flex: 1;
+    width: 100%;
     border: 1px solid var(--gris);
+    padding: 1rem;
 }
+
 .campo__field--textarea {
     height: 20rem;
+}
+
+/* TABLET Y DESKTOP */
+@media (min-width: 768px) {
+
+    .formulario {
+        padding: 5rem;
+        width: 80%;
+    }
+
+    .campo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .campo__label {
+        flex: 0 0 9rem;
+        text-align: right;
+        padding-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .campo__field {
+        flex: 1;
+    }
+
 }
